@@ -85,6 +85,27 @@ pip install pycaw comtypes
 
 ---
 
+## Agentes y Skills (IA)
+
+El repo incluye definiciones para trabajar con agentes de IA (Copilot, Claude, HF Agents):
+
+```
+.github/
+└── copilot-instructions.md   # instrucciones de contexto para GitHub Copilot
+
+agents/
+├── vision-lab-assistant.md   # ayuda con MediaPipe, Gradio y TODOs de los labs
+└── deploy-assistant.md       # migra notebooks a app.py y guía el deploy
+
+skills/
+├── mediapipe-vision/         # landmarks de manos, cara y pose
+├── gradio-interface/         # gr.Interface, gr.Blocks, patrón 3 capas
+├── hf-pipeline/              # ViT, CLIP zero-shot, DETR
+└── hf-spaces-deploy/         # git + HF Spaces + doble remote GitHub
+```
+
+---
+
 ## Dependencias principales
 
 | Librería | Uso |
