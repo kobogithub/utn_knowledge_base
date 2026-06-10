@@ -1,0 +1,10 @@
+{
+	"servers": {
+		"railway": {
+			"type": "stdio",
+			"command": "/home/linuxbrew/.linuxbrew/bin/railway",
+			"args": ["mcp"]
+		}
+	},
+	"inputs": []
+}
