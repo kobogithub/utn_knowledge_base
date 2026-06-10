@@ -4,7 +4,6 @@
 
 import mediapipe as mp
 import gradio as gr
-import numpy as np
 
 
 # ─────────────────────────────────────────────────────────────────────────
@@ -13,9 +12,15 @@ import numpy as np
 # Si lo cargáramos dentro de la función, cada request esperaría la carga.
 # ─────────────────────────────────────────────────────────────────────────
 
-modulo_pose    = mp.solutions.pose
-modulo_dibujo  = mp.solutions.drawing_utils
-estilos_dibujo = mp.solutions.drawing_styles
+# Compatibilidad entre versiones de MediaPipe
+if hasattr(mp, "solutions"):
+    modulo_solutions = mp.solutions
+else:
+    import mediapipe.python.solutions as modulo_solutions
+
+modulo_pose = modulo_solutions.pose
+modulo_dibujo = modulo_solutions.drawing_utils
+estilos_dibujo = modulo_solutions.drawing_styles
 
 # TODO: completá los parámetros con los valores que encontraron en la exploración
 detector_pose = modulo_pose.Pose(
@@ -32,9 +37,42 @@ detector_pose = modulo_pose.Pose(
 # ─────────────────────────────────────────────────────────────────────────
 
 def detectar_pose(imagen_entrada):
-    # TODO: peguen aquí la función que terminaron en la Consigna 1
-    # Asegúrense de que incluya los TODO que completaron (métricas propias, etc.)
-    pass
+    """Recibe una imagen RGB y devuelve imagen anotada + texto de metricas."""
+    if imagen_entrada is None:
+        return None, "Subi una imagen para analizar."
+
+    resultado = detector_pose.process(imagen_entrada)
+    imagen_anotada = imagen_entrada.copy()
+
+    if resultado.pose_landmarks is None:
+        return imagen_anotada, "No se detecto ninguna figura humana en la imagen."
+
+    modulo_dibujo.draw_landmarks(
+        image=imagen_anotada,
+        landmark_list=resultado.pose_landmarks,
+        connections=modulo_pose.POSE_CONNECTIONS,
+        landmark_drawing_spec=estilos_dibujo.get_default_pose_landmarks_style(),
+    )
+
+    lista_landmarks = resultado.pose_landmarks.landmark
+    punto_hombro_derecho = lista_landmarks[12]
+    punto_hombro_izquierdo = lista_landmarks[11]
+    punto_cadera_derecha = lista_landmarks[24]
+
+    distancia_hombros = abs(punto_hombro_derecho.x - punto_hombro_izquierdo.x)
+    distancia_hombros_redondeada = round(distancia_hombros, 3)
+    distancia_vertical_hombro_cadera = abs(punto_hombro_derecho.y - punto_cadera_derecha.y)
+
+    linea_hombros = f"Distancia entre hombros: {distancia_hombros_redondeada}"
+    linea_visibilidad = f"Visibilidad hombro derecho: {round(punto_hombro_derecho.visibility, 2)}"
+    linea_cadera = f"Cadera derecha y={round(punto_cadera_derecha.y, 3)}"
+    linea_metrica = (
+        "Distancia vertical hombro-cadera derecha: "
+        f"{round(distancia_vertical_hombro_cadera, 3)}"
+    )
+
+    texto_info = "\n".join([linea_hombros, linea_visibilidad, linea_cadera, linea_metrica])
+    return imagen_anotada, texto_info
 
 
 # ─────────────────────────────────────────────────────────────────────────
@@ -51,15 +89,11 @@ with gr.Blocks(title="Detector de Pose") as aplicacion:
     )
 
     with gr.Row():
-        # TODO: definí los componentes de entrada
-        # Pista: gr.Image con type="numpy" y un label descriptivo
-        entrada_imagen = None   # reemplazá None por el componente correcto
+        entrada_imagen = gr.Image(label="Fotografia", type="numpy")
 
     with gr.Row():
-        # TODO: definí los dos componentes de salida
-        # Pista: imagen anotada + cuadro de texto con métricas
-        salida_imagen = None    # reemplazá None por el componente correcto
-        salida_texto  = None    # reemplazá None por el componente correcto
+        salida_imagen = gr.Image(label="Pose detectada")
+        salida_texto = gr.Textbox(label="Informacion de puntos clave", lines=6)
 
     boton_analizar = gr.Button("Analizar pose", variant="primary")
 
@@ -71,4 +105,8 @@ with gr.Blocks(title="Detector de Pose") as aplicacion:
 
 
 if __name__ == "__main__":
-    aplicacion.launch()
+    aplicacion.launch(
+        server_name="0.0.0.0",
+        server_port=7865,
+        share=False,
+    )
