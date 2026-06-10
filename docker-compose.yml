@@ -1,0 +1,12 @@
+services:
+  jupyter:
+    build: .
+    image: utn-jupyter:latest
+    container_name: utn_jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/notebooks
+    environment:
+      - JUPYTER_TOKEN=clase
+    restart: unless-stopped
