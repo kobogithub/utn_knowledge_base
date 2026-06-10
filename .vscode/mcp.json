@@ -2,7 +2,7 @@
 	"servers": {
 		"railway": {
 			"type": "stdio",
-			"command": "/home/linuxbrew/.linuxbrew/bin/railway",
+			"command": "/home/linuxbrew/.linuxbrew/Cellar/railway/4.65.0/bin/railway",
 			"args": ["mcp"]
 		}
 	},
