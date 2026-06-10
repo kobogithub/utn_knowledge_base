@@ -15,7 +15,7 @@ RUN pip install --no-cache-dir jupyterlab>=4.0.0 && \
     pip install --no-cache-dir transformers>=4.35.0 && \
     pip install --no-cache-dir pillow>=10.0.0 requests>=2.31.0 matplotlib>=3.7.0 numpy>=1.24.0
 
-EXPOSE 8888
+EXPOSE 8888 7860-7870
 
 CMD ["jupyter", "lab", \
      "--ip=0.0.0.0", \
