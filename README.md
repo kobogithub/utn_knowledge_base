@@ -6,12 +6,51 @@ El objetivo del proyecto es centralizar laboratorios y ejemplos de visión artif
 
 ## Backend FastAPI Agro
 
-Este repositorio incluye un backend experimental para pedidos de semillas en `backend/`.
+Este repositorio incluye un backend funcional para gestión de pedidos de semillas en `backend/`.
+
+Estado actual del backend:
+
+- API FastAPI con SQLite + SQLAlchemy sincrónico.
+- Dominio implementado: clientes, semillas, lotes, pedidos e inventario.
+- Regla crítica implementada: validación de stock y reserva al confirmar pedidos.
+- Tests automatizados disponibles y en estado verde.
+
+## Ejecución rápida (desde raíz del repo)
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r backend/requirements.txt
+cp backend/.env.example backend/.env
+python -m backend.db.init_db
+uvicorn backend.app:app --reload
+```
+
+Documentación interactiva: `http://127.0.0.1:8000/docs`
+
+## Verificación manual mínima
+
+```bash
+# Salud
+curl -s http://127.0.0.1:8000/health
+
+# Ping API v1
+curl -s http://127.0.0.1:8000/api/v1/ping
+```
+
+## Flujo sugerido de prueba de negocio
+
+1. Crear un cliente (`POST /api/v1/clientes`).
+2. Crear una semilla (`POST /api/v1/semillas`).
+3. Crear un lote (`POST /api/v1/lotes`).
+4. Crear un pedido borrador (`POST /api/v1/pedidos`).
+5. Confirmar el pedido (`POST /api/v1/pedidos/{pedido_id}/confirmar`).
+6. Verificar inventario reservado (`GET /api/v1/inventario`).
 
 ### Instalación local
 
 ```bash
-cd /home/kobo/github/personal/utn_knowledge_base/backend
+cd backend
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -21,12 +60,14 @@ cp .env.example .env
 ### Inicializar la base
 
 ```bash
+cd ..
 python -m backend.db.init_db
 ```
 
 ### Ejecutar el servidor
 
 ```bash
+cd ..
 uvicorn backend.app:app --reload
 ```
 
@@ -37,6 +78,8 @@ La documentación automática queda disponible en `/docs`.
 ```bash
 pytest backend/tests
 ```
+
+Resultado esperado actual: `4 passed`.
 
 ## Contenido
 

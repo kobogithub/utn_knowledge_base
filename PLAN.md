@@ -2,6 +2,44 @@
 
 Construir un backend nuevo dentro del repositorio usando FastAPI + SQLite + SQLAlchemy sincrónico, orientado al caso de uso de pedidos de lotes de semilla. El alcance incluye entidades de clientes, semillas, lotes, pedidos e inventario, más datos de ejemplo y tests básicos, evitando complejidad innecesaria como async, autenticación o migraciones completas en esta primera iteración.
 
+## Estado de avance (2026-06-17)
+
+### Cumplido
+
+- [x] Step 1: estructura base en `backend/` creada.
+- [x] Step 2: punto de entrada FastAPI implementado en `backend/app.py`.
+- [x] Step 3: configuración central y `.env.example` implementados.
+- [x] Step 4: capa de base de datos sincrónica (`engine`, `SessionLocal`, `Base`, `get_db`) implementada.
+- [x] Step 5: modelos ORM de dominio implementados (`Cliente`, `Semilla`, `Lote`, `Pedido`, `LineaPedido`, `Inventario`).
+- [x] Step 6: esquemas Pydantic de creación/lectura implementados.
+- [x] Step 7: servicios de negocio implementados con validación de stock y reserva al confirmar pedidos.
+- [x] Step 8: endpoints REST v1 implementados (clientes, semillas, lotes, pedidos, inventario, confirmar pedido).
+- [x] Step 9: script de seed creado en `backend/db/init_db.py` con enfoque idempotente.
+- [x] Step 10: dependencias del backend definidas en `backend/requirements.txt` e instaladas localmente.
+- [x] Step 11: tests básicos implementados y ejecutados en `backend/tests` (resultado actual: 4 passed).
+- [x] Step 12: README actualizado con instalación, inicialización, ejecución y tests del backend.
+- [x] Step 13: `.gitignore` ajustado para excluir base de datos, entorno y cachés.
+
+### Pendiente
+
+- [ ] Step 14.2: verificar explícitamente idempotencia ejecutando seed 2 veces seguidas y comparando resultado.
+- [ ] Step 14.3: levantar `uvicorn` y validar manualmente `/health` y `/docs` en ejecución real.
+- [ ] Step 14.4: recorrer flujo manual end-to-end (listar recursos, crear pedido, confirmar, verificar inventario).
+- [ ] Hardening no bloqueante: migrar `datetime.utcnow()` a timezone-aware (`datetime.now(datetime.UTC)`) para eliminar warnings de deprecación.
+
+### Tareas y dependencias
+
+- T1. Verificación de seed idempotente.
+	Depende de: Steps 4, 5, 9, 10.
+- T2. Smoke test de servidor con `uvicorn` (`/health`, `/docs`).
+	Depende de: Steps 2, 3, 4, 8, 10.
+- T3. Prueba manual del flujo de negocio de pedidos.
+	Depende de: T1, T2, Steps 6, 7, 8.
+- T4. Cierre técnico de warnings de fecha.
+	Depende de: Steps 5 y 7.
+- T5. Cierre final del Step 14.
+	Depende de: T1, T2 y T3 completos.
+
 **Steps**
 1. Fase 1: base del proyecto. Crear la carpeta /home/kobo/github/personal/utn_knowledge_base/backend con una estructura consistente para FastAPI: app principal, configuración, conexión SQLite, modelos ORM, esquemas Pydantic, servicios, routers y tests. Esta fase desbloquea todo lo demás.
 2. Definir el punto de entrada de la API en /home/kobo/github/personal/utn_knowledge_base/backend/app.py con metadata de FastAPI, ruta de salud y registro del router v1. Mantenerlo simple y listo para correr con uvicorn.
