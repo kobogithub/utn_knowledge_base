@@ -4,6 +4,17 @@
 
 Material de laboratorio para la materia **Procesamiento Digital de Imágenes** (Tecnicatura Superior en Ciencias de Datos e IA, IFTS24). Los notebooks combinan visión artificial en tiempo real, interfaces web con Gradio y modelos preentrenados de Hugging Face.
 
+## Prioridad actual del proyecto
+
+Durante esta iteración, la prioridad principal es implementar el backend **FastAPI Agro** definido en `PLAN.md`, dentro de la carpeta `backend/`, con foco en:
+
+- FastAPI + SQLite + SQLAlchemy sincrónico
+- Dominio de negocio: clientes, semillas, lotes, pedidos e inventario
+- Reglas críticas: validación de stock y reserva al confirmar pedidos
+- Datos de ejemplo idempotentes y tests básicos de API/negocio
+
+Si hay conflicto entre tareas, priorizar avances del backend antes de nuevas extensiones en notebooks o demos.
+
 ## Stack principal
 
 - **MediaPipe** — detección de landmarks (manos, cara, pose)
