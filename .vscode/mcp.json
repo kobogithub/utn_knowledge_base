@@ -4,6 +4,11 @@
 			"type": "stdio",
 			"command": "/home/linuxbrew/.linuxbrew/Cellar/railway/4.65.0/bin/railway",
 			"args": ["mcp"]
+		},
+		"firebase": {
+			"type": "stdio",
+			"command": "npx",
+			"args": ["-y", "firebase-tools@latest", "mcp"]
 		}
 	},
 	"inputs": []

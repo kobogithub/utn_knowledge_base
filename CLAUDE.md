@@ -26,6 +26,11 @@ Si hay conflicto entre tareas, priorizar avances del backend antes que nuevas ex
 - PyTorch CPU como backend de inferencia.
 - JupyterLab como entorno de ejecución de notebooks.
 
+## Skills locales en `.github/skills`
+
+- `fastapi` (`.github/skills/fastapi/SKILL.md`): usar cuando la tarea requiera crear, refactorizar o revisar código de backend FastAPI (endpoints, dependencias, routers, validaciones, modelos de respuesta y ejecución con CLI `fastapi dev`/`fastapi run`).
+- `jupyter-notebook` (`.github/skills/jupyter-notebook/SKILL.md`): usar cuando la tarea requiera crear, estructurar o editar notebooks `.ipynb` para experimentos o tutoriales, priorizando reproducibilidad y estructura consistente.
+
 ## Convenciones de código
 
 ### Idioma
