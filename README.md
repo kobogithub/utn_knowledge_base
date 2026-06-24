@@ -16,6 +16,9 @@ Autor: Matías Barreto, 2026
 | 04 | `Proyecto_Pose_y_Despliegue` | MediaPipe Pose + deploy en Hugging Face Spaces |
 | 05 | `Modelos_Preentrenados_HuggingFace` | ViT, CLIP (zero-shot) y DETR con `pipeline` de HF |
 | 06 | `Cheatsheet_Desarrollo_Space` | Referencia rápida: git, Gradio, Transformers, 3 capas |
+| 07 | `Analisis_Datos_Agro` | Pandas + EDA como mini pipeline Medallion (`unprocessed`→`processed`→`curated`) sobre datos reales de cosechas |
+
+> El notebook 07 lee/escribe en `notebooks/data/` (capas `unprocessed`, `processed`, `curated`). Usa datos **reales y abiertos** de las [Estimaciones Agrícolas del MAGyP](https://datos.magyp.gob.ar/dataset/estimaciones-agricolas); el subset crudo se descarga con `notebooks/data/descargar_dataset_agro.py` (también queda commiteado). Requiere `pandas` y `seaborn` (ver `requirements.txt`).
 
 ---
 
