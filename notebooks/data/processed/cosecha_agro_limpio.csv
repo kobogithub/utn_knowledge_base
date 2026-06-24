@@ -2618,6 +2618,7 @@ maiz,2017,2017/2018,Tucumán,Cruz Alta,9600,9220,64540,7.0,0.96
 maiz,2017,2017/2018,Tucumán,Graneros,10400,9650,62725,6.5,0.928
 maiz,2017,2017/2018,Tucumán,Simoca,600,490,3185,6.5,0.817
 maiz,2017,2017/2018,Tucumán,Trancas,750,240,1800,7.5,0.32
+maiz,2017,2017/2018,Tucumán,Tafí del Valle,100,100,0,0.0,1.0
 maiz,2018,2018/2019,Buenos Aires,Marcos Paz,900,180,1530,8.5,0.2
 maiz,2018,2018/2019,San Luis,Coronel Pringles,65000,57000,319200,5.6,0.877
 maiz,2018,2018/2019,Buenos Aires,Mercedes,7300,6497,58473,9.0,0.89
@@ -3196,6 +3197,7 @@ maiz,2019,2019/2020,Santiago del Estero,Silípica,5000,4750,33393,7.03,0.95
 maiz,2019,2019/2020,Santiago del Estero,Sarmiento,6200,5830,34689,5.95,0.94
 maiz,2019,2019/2020,Tucumán,Cruz Alta,10000,9570,48185,5.035,0.957
 maiz,2019,2019/2020,Tucumán,Burruyacú,43000,41350,215020,5.2,0.962
+maiz,2019,2019/2020,Tucumán,Tafí del Valle,60,60,0,0.0,1.0
 maiz,2019,2019/2020,Tucumán,Simoca,400,300,1560,5.2,0.75
 maiz,2019,2019/2020,Tucumán,Trancas,650,150,945,6.3,0.231
 maiz,2020,2020/2021,Córdoba,General San Martín,130800,68800,584800,8.5,0.526
@@ -3754,6 +3756,7 @@ maiz,2021,2021/2022,Santa Fe,San Martín,105000,98826,543544,5.5,0.941
 maiz,2021,2021/2022,Santa Fe,Vera,15000,12100,54934,4.54,0.807
 maiz,2021,2021/2022,Santa Fe,San Lorenzo,34700,31900,169070,5.3,0.919
 maiz,2021,2021/2022,Santa Fe,San Justo,53693,37593,165409,4.4,0.7
+maiz,2021,2021/2022,Santiago del Estero,Quebrachos,2000,2000,0,0.0,1.0
 maiz,2021,2021/2022,Santiago del Estero,Avellaneda,5500,5120,35328,6.9,0.931
 maiz,2021,2021/2022,Santiago del Estero,Alberdi,81000,79370,595275,7.5,0.98
 maiz,2021,2021/2022,Santiago del Estero,Figueroa,5000,5000,37500,7.5,1.0
@@ -3768,6 +3771,7 @@ maiz,2021,2021/2022,Santiago del Estero,Juan F. Ibarra,68000,60470,441431,7.3,0.
 maiz,2021,2021/2022,Santiago del Estero,Jiménez,55000,49500,371250,7.5,0.9
 maiz,2021,2021/2022,Santiago del Estero,Guasayán,8000,7200,54000,7.5,0.9
 maiz,2021,2021/2022,Santiago del Estero,Loreto,3000,2700,20250,7.5,0.9
+maiz,2021,2021/2022,Santiago del Estero,Ojo de Agua,1500,1500,0,0.0,1.0
 maiz,2021,2021/2022,Santiago del Estero,Moreno,240500,230570,1729275,7.5,0.959
 maiz,2021,2021/2022,Santiago del Estero,Mitre,15000,13500,101250,7.5,0.9
 maiz,2021,2021/2022,Santiago del Estero,Silípica,5000,4500,33750,7.5,0.9
@@ -7491,6 +7495,7 @@ trigo,2015,2015/2016,Buenos Aires,Balcarce,11175,10755,51333,4.773,0.962
 trigo,2015,2015/2016,Córdoba,San Javier,3500,3500,11200,3.2,1.0
 trigo,2015,2015/2016,Córdoba,Río Cuarto,60980,55980,106360,1.9,0.918
 trigo,2015,2015/2016,Buenos Aires,Junín,19860,16860,75870,4.5,0.849
+trigo,2015,2015/2016,Buenos Aires,General Guido,500,500,0,0.0,1.0
 trigo,2015,2015/2016,Buenos Aires,Lobería,37900,37340,146600,3.926,0.985
 trigo,2015,2015/2016,Buenos Aires,Lincoln,23640,21840,85180,3.9,0.924
 trigo,2015,2015/2016,Buenos Aires,Adolfo Gonzales Chaves,36410,33410,120276,3.6,0.918
@@ -8815,6 +8820,7 @@ trigo,2020,2020/2021,Santa Fe,Vera,9600,8200,17220,2.1,0.854
 trigo,2020,2020/2021,Santiago del Estero,Capital,7500,7500,18750,2.5,1.0
 trigo,2020,2020/2021,Entre Ríos,Villaguay,44000,43800,127020,2.9,0.995
 trigo,2020,2020/2021,Tucumán,Tafí Viejo,100,100,80,0.8,1.0
+trigo,2020,2020/2021,Tucumán,Lules,100,100,0,0.0,1.0
 trigo,2020,2020/2021,Entre Ríos,Gualeguaychú,69000,68000,197200,2.9,0.986
 trigo,2020,2020/2021,Entre Ríos,Nogoyá,63000,62500,150000,2.4,0.992
 trigo,2020,2020/2021,Entre Ríos,Uruguay,47000,46700,135430,2.9,0.994
@@ -9400,6 +9406,7 @@ trigo,2023,2023/2024,Buenos Aires,Ramallo,16830,16830,77412,4.6,1.0
 trigo,2023,2023/2024,Buenos Aires,Pilar,300,300,1440,4.8,1.0
 trigo,2023,2023/2024,Tucumán,Graneros,11200,11070,12177,1.1,0.988
 trigo,2023,2023/2024,Buenos Aires,General Belgrano,12969,12836,46873,3.652,0.99
+trigo,2023,2023/2024,Tucumán,Yerba Buena,50,50,0,0.0,1.0
 trigo,2023,2023/2024,La Pampa,Rancul,11100,10000,18000,1.8,0.901
 trigo,2023,2023/2024,San Luis,Junín,1100,1100,3120,2.836,1.0
 trigo,2023,2023/2024,Buenos Aires,Tres Arroyos,109461,109461,481634,4.4,1.0
@@ -9481,6 +9488,7 @@ trigo,2023,2023/2024,Entre Ríos,Gualeguaychú,91000,84700,321860,3.8,0.931
 trigo,2023,2023/2024,Buenos Aires,Pehuajó,40742,36242,72505,2.001,0.89
 trigo,2023,2023/2024,Entre Ríos,Victoria,59000,54900,175680,3.2,0.931
 trigo,2023,2023/2024,Buenos Aires,General Rodríguez,2500,2500,11500,4.6,1.0
+trigo,2023,2023/2024,Tucumán,Lules,400,400,0,0.0,1.0
 trigo,2023,2023/2024,Buenos Aires,Lincoln,37000,32500,68250,2.1,0.878
 trigo,2023,2023/2024,Buenos Aires,Florentino Ameghino,8530,7630,14497,1.9,0.894
 trigo,2023,2023/2024,Santiago del Estero,San Martín,10000,10000,20000,2.0,1.0
@@ -9489,6 +9497,7 @@ trigo,2023,2023/2024,Tucumán,Cruz Alta,13800,13700,17890,1.306,0.993
 trigo,2023,2023/2024,Santiago del Estero,Silípica,2000,2000,4300,2.15,1.0
 trigo,2023,2023/2024,Buenos Aires,Colón,13350,13350,66750,5.0,1.0
 trigo,2023,2023/2024,Buenos Aires,Junín,39000,39000,156000,4.0,1.0
+trigo,2023,2023/2024,Tucumán,Famaillá,300,300,0,0.0,1.0
 trigo,2023,2023/2024,Chaco,San Lorenzo,500,500,300,0.6,1.0
 trigo,2023,2023/2024,Tucumán,La Cocha,14350,14240,18577,1.305,0.992
 trigo,2023,2023/2024,Buenos Aires,Mercedes,7900,7900,27650,3.5,1.0
@@ -9583,6 +9592,7 @@ trigo,2023,2023/2024,Santa Fe,San Justo,63900,51200,122880,2.4,0.801
 trigo,2023,2023/2024,Jujuy,San Antonio,250,250,525,2.1,1.0
 trigo,2023,2023/2024,La Pampa,Hucal,23000,23000,46000,2.0,1.0
 trigo,2023,2023/2024,Corrientes,Curuzu Cuatia,800,800,2240,2.8,1.0
+trigo,2023,2023/2024,Tucumán,Capital,80,80,0,0.0,1.0
 trigo,2023,2023/2024,La Pampa,Conhelo,32100,31100,65310,2.1,0.969
 trigo,2023,2023/2024,Santa Fe,La Capital,19000,16200,38880,2.4,0.853
 trigo,2023,2023/2024,Santa Fe,General Obligado,52700,49000,88200,1.8,0.93
