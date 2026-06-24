@@ -1,0 +1,19 @@
+{
+  "functions": [
+    {
+      "source": ".",
+      "codebase": "default",
+      "runtime": "python311",
+      "ignore": [
+        ".git",
+        ".github",
+        ".vscode",
+        ".venv",
+        ".venv-datos",
+        "**/__pycache__/**",
+        "**/.pytest_cache/**",
+        "notebooks/**"
+      ]
+    }
+  ]
+}

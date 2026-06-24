@@ -1,0 +1,3 @@
+-r backend/requirements.txt
+firebase-functions>=0.3.0
+a2wsgi>=1.10.8
